@@ -11,7 +11,7 @@ export function DigitPair (props) {
     }
 
     return (
-        <div>
+        <div className="DigitPair">
             <Digit onValueChange = {onTenth} type = "tenths"/> 
             <Digit onValueChange = {onSingle}/>
         </div>
@@ -45,10 +45,9 @@ function Digit (props) {
 
     return (
         <div>
-            <p>{props.type}</p>
-            <button onClick={increment}>UP</button>
-            <p>{number}</p>
-            <button onClick={decrement}>DOWN</button>
+            <button className="button" onClick={increment}>UP</button>
+            <p className = "DigitText">{number}</p>
+            <button className="button" onClick={decrement}>DOWN</button>
         </div>
 
     )

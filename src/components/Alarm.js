@@ -29,8 +29,8 @@ export function Alarm (props) {
             <audio autoPlay loop src={alarmSound}>
                 Your browser doesn't support the alarm!               
             </audio>
-            <h2 className = 'AlarmText'>ALARM</h2>
-            <button onClick = {props.stop}>Stop Alarm</button>
+            <h2 className = 'AlarmText'>YOUR TIME IS UP!</h2>
+            <button className="button" onClick = {props.stop}>Reset</button>
         </div>
     )
 }

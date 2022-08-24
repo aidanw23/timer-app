@@ -60,9 +60,9 @@ export function Running (props) {
     return (
         <div className='Counter'>
             <h2>{remaining.toFormat("mm ss")}</h2>
-            {!paused && <button onClick  = {stopTimer}> STOP</button>}
-            {!paused && <button onClick = {pauseTimer} >PAUSE</button>}
-            {paused && <button onClick = {unpause}>UNPAUSE</button>}
+            {!paused && <button className="button" onClick  = {stopTimer}> STOP</button>}
+            {!paused && <button className="button" onClick = {pauseTimer} >PAUSE</button>}
+            {paused && <button className="button" onClick = {unpause}>UNPAUSE</button>}
         </div>
     )
 }

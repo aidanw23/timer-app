@@ -70,14 +70,21 @@ export function Timer (props) {
                 <Running duration = {duration} isRunning = {running} onEnd = {stopTimer} />
             </div>
             }
-            {running === false & alarm === false &&
+            {(running === false & alarm === false) ?
             <div className="Setup">
-                <h3>Minutes</h3>
-                <DigitPair unit = "minutes"  tenth = {handleTenthChange} digit = {handleDigitChange}/> 
-                <h3>Seconds</h3>
-                <DigitPair unit = "seconds"  tenth = {handleTenthChange} digit = {handleDigitChange}/>
-                <button onClick = {timeStart}>START</button>
-            </div>}
+                <div className = "UnitContainer">
+                    <div className="Unit">
+                        <h3>Minutes</h3>
+                        <DigitPair unit = "minutes"  tenth = {handleTenthChange} digit = {handleDigitChange}/>
+                    </div> 
+                    <div className="Unit">
+                        <h3>Seconds</h3>
+                        <DigitPair unit = "seconds"  tenth = {handleTenthChange} digit = {handleDigitChange}/>
+                    </div> 
+                </div>
+                <button className="button start" onClick = {timeStart}>START</button>
+            </div> : null
+            }
         </div>
     )
 }

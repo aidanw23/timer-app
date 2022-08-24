@@ -1,4 +1,5 @@
-.App {
+/* DEFAULT CSS */
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +36,88 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.App {
+  text-align: center;
+  background-color: #192230;
+
+  height: 100vh;
+  padding: 1px;
+
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
+
+/* TITLEBAR */
+.TitleBar {
+  width: 100%;
+  height: 10vh;
+  min-height: 10vh;
+  padding-left: 20px;
+
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  position: fixed;
+
+  background-color: #30425e;
+  color:aliceblue;
+  border-bottom: 2px solid #d5dae0;
+}
+
+
+/* TIMER AND INTERNAL COMPONENTS */
+.Timer {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #d5dae0;
+}
+
+.UnitContainer {
+  display:flex;
+  flex-direction: row;
+}
+
+.DigitPair {
+  display:flex;
+  flex-direction: row;
+  padding: 0px 5px 0px 5px;;
+}
+
+.DigitText {
+  font-size: 2v;
+}
+
+/* BUTTONS */
+.button {
+  background-color: #192230; 
+  border: 3px solid #d5dae0;
+  border-radius: 4px;
+  color: white;
+
+  width: 100px;
+  padding: 10px 0 10px 0;
+  text-align: center;
+  text-decoration: none;
+
+  display: inline-block;
+  font-size: 16px;
+
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #d5dae0;
+  color:#192230;
+}
+
+.start {
+  margin-top: 50px; 
+}
+
